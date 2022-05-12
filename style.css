@@ -10,7 +10,7 @@ body {
 .wrapper {
     height: 100%;
     display: grid;
-    grid-template: 1fr 3fr / 1fr 3fr;
+    grid-template: 1fr 4fr / 1fr 4fr;
 }
 
 .sidebar {
@@ -41,11 +41,86 @@ body {
     display: grid;
 }
 .main-header {
+    position: relative;
     grid-column: 2/5;
     display: grid;
+    grid-template-rows: 1fr fr;
+    grid-template-columns: 1fr 1fr;
+    padding: 1rem;
+    box-shadow: 2px 2px 2px #888888;
 }
+
+.top-header {
+    display: grid;
+    grid-column: 1/3;
+    justify-items: space-between;
+    grid-template-columns: 2fr 1fr;
+}
+
+.searchbar{
+    display: grid;
+    grid-column: 1/2;
+    grid-template-columns: 1fr 1fr;
+    justify-self: start;
+}
+
+.profile-header {
+    display: grid;
+    grid-column: 2/3;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.sub-header {
+    display: grid;
+    grid-column: 1/3;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+.profile-greeting {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: end;
+    place-items: center;
+    gap:5px;
+}
+
+.sub-header .profile-logo {
+    display: grid;
+    align-self: stretch;
+    justify-self: stretch;
+    place-content: center;
+    border: 2px solid black;
+}
+
+
+.sub-header-text {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    align-content: center;
+    justify-self: start;
+}
+
+.fullname {
+    display: flex;
+}
+
+.greeting {
+    align-self: end;
+}
+
+.sort-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+}
+
 
 .page-content {
     display: grid;
     grid-column: 2/5;
+    overflow: auto;
+    background-color: rgb(191, 191, 191);
+    padding: 1rem;
 }
